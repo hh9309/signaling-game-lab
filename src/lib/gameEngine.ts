@@ -481,7 +481,7 @@ function checkPureStrategy(game: GameStructure, senderProfile: { [typeId: string
     },
     {
       title: '第 5 步：结论',
-      content: `由于该策略组合在所有信息集下都满足序列理性（Sequential Rationality）和贝叶斯一致性（Bayesian Consistency），因此构成一个${isSeparating ? '分离' : '混同'}完美贝叶斯均衡。`
+      content: `由于该策略组合在所有信息集下都满足序列理性（Sequential Rationality）和贝叶斯一致性（Bayesian Consistency），因此构成一个${isSeparating ? '分离' : '混同'}精炼贝叶斯均衡。`
     }
   ];
 

@@ -79,7 +79,7 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = ({
     <div className="flex-1 flex flex-col gap-6">
       {/* Equilibrium List */}
       <section>
-        <div className="section-title">完美贝叶斯均衡 (PBE)</div>
+        <div className="section-title">精炼贝叶斯均衡 (PBE)</div>
         {results.length > 0 ? (
           <div className="space-y-3">
             {results.map((res, idx) => (
