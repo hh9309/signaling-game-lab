@@ -1,0 +1,6 @@
+{
+  "name": "信号博弈实验室 (Signaling Game Lab)",
+  "description": "一个融合建模、推理与AI分析能力的信号博弈实验平台，支持自定义不完全信息决策场景、自动推导完美贝叶斯均衡及可视化博弈树。",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
