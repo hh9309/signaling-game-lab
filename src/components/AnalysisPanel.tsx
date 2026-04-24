@@ -134,21 +134,12 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = ({
             <Sparkles className="w-3 h-3" />
             <span className="text-[10px] font-bold uppercase tracking-wider">AI 策略解释器</span>
           </div>
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setShowSettings(true)}
-              className="p-1 hover:bg-accent/10 rounded-full transition-colors"
-            >
-              <Settings2 className="w-3 h-3 text-muted" />
-            </button>
-            <button
-              onClick={handleExplain}
-              disabled={isExplaining || results.length === 0}
-              className="text-[10px] text-accent font-bold uppercase hover:underline disabled:opacity-50"
-            >
-              {isExplaining ? '分析中...' : '生成解释'}
-            </button>
-          </div>
+          <button
+            onClick={() => setShowSettings(true)}
+            className="p-1 hover:bg-accent/10 rounded-full transition-colors"
+          >
+            <Settings2 className="w-3 h-3 text-muted" />
+          </button>
         </div>
 
         <AnimatePresence>
@@ -232,7 +223,28 @@ export const AnalysisPanel: React.FC<AnalysisPanelProps> = ({
         </div>
       </div>
 
-      <button className="btn-primary w-full mt-auto">导出实验报告</button>
+      <button 
+        onClick={handleExplain}
+        disabled={isExplaining || results.length === 0}
+        className="btn-primary w-full mt-auto flex items-center justify-center gap-2"
+      >
+        {isExplaining ? (
+          <>
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}
+            >
+              <RotateCcw className="w-4 h-4" />
+            </motion.div>
+            <span>深度分析中...</span>
+          </>
+        ) : (
+          <>
+            <Sparkles className="w-4 h-4" />
+            <span>生成 AI 策略深度解释</span>
+          </>
+        )}
+      </button>
     </div>
   );
 };
